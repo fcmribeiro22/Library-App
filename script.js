@@ -1,48 +1,47 @@
-// Button to form Popup
+const openButton = document.querySelector('.open-button');
+const closeButton = document.querySelector('.close-button');
+const submitButton = document.querySelector('.submit-button');
 
-// eslint-disable-next-line no-unused-vars
-function openForm() {
+openButton.addEventListener('click', () => {
   document.querySelector('.form-container').style.display = 'flex';
-  document.querySelector('.open-button').style.display = 'none';
-}
+  openButton.style.display = 'none';
+});
 
-// eslint-disable-next-line no-unused-vars
-function closeForm() {
+closeButton.addEventListener('click', () => {
   document.querySelector('.form-container').style.display = 'none';
-  document.querySelector('.open-button').style.display = 'inline';
-}
-// Add books to program
+  openButton.style.display = 'inline';
+});
 
 const myLibrary = [];
+
+function resetForm() {
+  document.getElementById('title').value = '';
+  document.getElementById('author').value = '';
+  document.getElementById('pages').value = '';
+  document.getElementById('read_status').checked = false;
+}
 
 // constructor
 function Book(title, author, pages, isRead) {
   this.title = title;
   this.author = author;
-  this.ages = pages;
+  this.pages = pages;
   this.isRead = isRead;
-
-  this.info = function () {
-    let readStatus;
-    if (this.isRead) {
-      readStatus = 'already read';
-    } else {
-      readStatus = 'not read yet';
-    }
-    return readStatus;
-  };
 }
 
-/* function addBookToLibrary() {
-  const title =
-  const author =
-  const pages =
-  const isRead = c
-
-  const book = new Book(title, author, pages, isRead);
+function addBookToLibrary(event) {
+  event.preventDefault();
+  const title = document.getElementById('title').value;
+  const author = document.getElementById('author').value;
+  const pages = document.getElementById('pages').value;
+  const read = document.getElementById('read_status').checked ? 'Read' : 'Not Read Yet.';
+  const book = new Book(title, author, pages, read);
 
   myLibrary.push(book);
+  resetForm();
+  document.querySelector('.form-container').style.display = 'none';
+  openButton.style.display = 'inline';
+  console.log(myLibrary);
 }
 
-addBookToLibrary(); // prompts the user for input and adds a new book to myLibrary
-console.log(myLibrary); // prints the current state of the library/*} */
+submitButton.addEventListener('click', addBookToLibrary);
