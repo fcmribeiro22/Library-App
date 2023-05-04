@@ -84,9 +84,55 @@
 }
 
 
+.book-container{
+
+  margin-top: 75px;
+  display: grid;
+  grid-template-columns: repeat( auto-fill, minmax(250px, 1fr) );
+  justify-content: space-around;
+  gap: 10px;
+  
+}
 
 .book-card{
-  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 0.5px solid #04AA6D;
+  border-radius: 10px;
+  background: #f1f1f1;
   padding: 20px;
-  border-radius: 5px;
+
+ 
+  
+}
+
+.book-card > h2{
+  font-size: 17px;
+  font-style: normal;
+
+}
+
+.book-delete-btn, .change-status-btn{
+  opacity: 0.8;
+  border-radius: 10px;
+  width: 50%;
+  padding: 5px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.change-status-btn{
+  background-color: lightseagreen;
+}
+
+.book-delete-btn:hover, .change-status-btn:hover{
+  opacity: 1;
+}
+
+.bookcard-buttons{
+  display: flex;
+  gap: 3%;
 }
