@@ -84,7 +84,7 @@ function printBooksToScreen() {
     bookCard.appendChild(pages);
 
     const read = document.createElement('p');
-    read.textContent = ` ${book.isRead}`;
+    read.textContent = book.isRead ? 'Read' : 'Not Read Yet.';
     bookCard.appendChild(read);
 
     const bookCardButtons = document.createElement('div');
