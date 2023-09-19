@@ -1,119 +1,113 @@
- *{
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
+* {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
 
-
- }
-
-  /* The popup form - hidden by default */
+/* The popup form - hidden by default */
 .form-popup {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  
-  }
-  
-  /* Add styles to the form container */
-  .form-container {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 3px;
-    border:3px solid #f1f1f1;
-    width: fit-content;
-    padding: 10px 20px;
-    margin-top: 10px;
-    border-radius: 20px;
-  }
-
-  /* Full-width input fields */
-.form-container input[type=text], .form-container input[type=number] {
-    width: 90%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    border: none;
-    background: #f1f1f1;
-    border-radius: 5px;
-  }
-  
-  /* When the inputs get focus, do something */
-  .form-container input[type=text]:focus, .form-container input[type=number]:focus {
-    background-color: #ddd;
-    outline: none;
-  }
-  
-  /* Set a style for the submit/login button */
-  .form-container .btn {
-    background-color: #04AA6D;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    margin-bottom:10px;
-    opacity: 0.8;
-    border-radius: 10px;
-  }
-  
-  /* Add a red background color to the cancel button */
-  .form-container .close-button {
-    background-color: red;
-  }
-  
-  /* Add some hover effects to buttons */
-  .form-container .btn:hover, .open-button:hover {
-    opacity: 1;
-  }
-
-.open-button{
-    background-color: #04AA6D;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    width: 30%;
-    margin-bottom:10px;
-    opacity: 0.8;
-    border-radius: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.form-intro{
-    font-size: 10px;
-    opacity: 0.5;
+/* Add styles to the form container */
+.form-container {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  border: 3px solid #f1f1f1;
+  width: fit-content;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 20px;
 }
 
+/* Full-width input fields */
+.form-container input[type="text"],
+.form-container input[type="number"] {
+  width: 90%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  border-radius: 5px;
+}
 
-.book-container{
+/* When the inputs get focus, do something */
+.form-container input[type="text"]:focus,
+.form-container input[type="number"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
 
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04aa6d;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+  border-radius: 10px;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .close-button {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}
+
+.open-button {
+  background-color: #04aa6d;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+  border-radius: 20px;
+}
+
+.form-intro {
+  font-size: 10px;
+  opacity: 0.5;
+}
+
+.book-container {
   margin-top: 75px;
   display: grid;
-  grid-template-columns: repeat( auto-fill, minmax(250px, 1fr) );
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   justify-content: space-around;
   gap: 10px;
-  
 }
 
-.book-card{
+.book-card {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  border: 0.5px solid #04AA6D;
+  border: 0.5px solid #04aa6d;
   border-radius: 10px;
   background: #f1f1f1;
   padding: 20px;
-
- 
-  
 }
 
-.book-card > h2{
+.book-card > h2 {
   font-size: 17px;
   font-style: normal;
-
 }
 
-.book-delete-btn, .change-status-btn{
+.book-delete-btn,
+.change-status-btn {
   opacity: 0.8;
   border-radius: 10px;
   width: 50%;
@@ -124,15 +118,24 @@
   cursor: pointer;
 }
 
-.change-status-btn{
+.change-status-btn {
   background-color: lightseagreen;
 }
 
-.book-delete-btn:hover, .change-status-btn:hover{
+.book-delete-btn:hover,
+.change-status-btn:hover {
   opacity: 1;
 }
 
-.bookcard-buttons{
+.bookcard-buttons {
   display: flex;
   gap: 3%;
+}
+
+input:invalid {
+  border: 2px dashed red;
+}
+
+input:valid {
+  border: 2px solid black;
 }
